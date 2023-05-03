@@ -1,0 +1,24 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "types": [
+      "unplugin-vue-define-options/macros-global",
+      "vite-plugin-svg-icons/client"
+    ]
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "vueCompilerOptions": {
+    "target": 3,
+    "plugins": ["@vue-macros/volar/define-options"]
+  }
+}
